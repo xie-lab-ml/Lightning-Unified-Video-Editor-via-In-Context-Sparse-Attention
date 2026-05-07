@@ -103,12 +103,6 @@ python inference.py \
     --backend tilelang                            # sparse kernel: tilelang (default) | triton
 ```
 
-### Slurm (HPC cluster)
-
-```bash
-bash slurm_infer.sh input.mp4 "your prompt" output.mp4
-```
-
 ### Switching the Sparse Backend
 
 ```python
@@ -201,8 +195,7 @@ LIVEditor/
 ├── scheduler.py                       # Flow UniPC scheduler
 ├── fm_solvers.py                      # Flow matching utilities
 ├── requirements.txt                   # Python dependencies
-├── infer.sh                           # Single-GPU inference script
-├── slurm_infer.sh                     # Slurm submission script
+├── infer.sh                           # Inference launch script
 ├── in_context_sparse_attention/       # Pluggable sparse kernels
 │   ├── editing_sparse_attention.py    # Main attention function (backend-agnostic)
 │   ├── tilelang_kernels.py            # TileLang kernel definitions
