@@ -4,11 +4,11 @@
 # resume_ckpt: /path/to/checkpoint.bin
 
 # Base model paths
-base_model_path: /data/user/sshao213/pretrained_weights/pretrained_weights/Wan2.2-T2V-A14B/
+base_model_path: /path/to/Wan2.2-T2V-A14B/
 t5_checkpoint: models_t5_umt5-xxl-enc-bf16.pth
 t5_tokenizer: google/umt5-xxl
 vae_checkpoint: Wan2.1_VAE.pth
-neg_prompt_embed_path: /data/user/sshao213/pretrained_weights/pretrained_weights/neg_prompt_embs/wanx_neg_prompt_embeds.pt
+neg_prompt_embed_path: /path/to/Wan2.2-T2V-A14B/neg_prompt_embs/wanx_neg_prompt_embeds.pt
 
 # Model config
 model:
