@@ -1,0 +1,47 @@
+# LIVEditor inference config
+
+# Checkpoint
+# resume_ckpt: /path/to/checkpoint.bin
+
+# Base model paths
+base_model_path: /data/user/sshao213/pretrained_weights/pretrained_weights/Wan2.2-T2V-A14B/
+t5_checkpoint: models_t5_umt5-xxl-enc-bf16.pth
+t5_tokenizer: google/umt5-xxl
+vae_checkpoint: Wan2.1_VAE.pth
+neg_prompt_embed_path: /data/user/sshao213/pretrained_weights/pretrained_weights/neg_prompt_embs/wanx_neg_prompt_embeds.pt
+
+# Model config
+model:
+  patch_size: [1, 2, 2]
+  vae_stride: [4, 8, 8]
+  text_len: 512
+  dim: 5120
+  ffn_dim: 13824
+  freq_dim: 256
+  text_dim: 4096
+  out_dim: 16
+  num_heads: 40
+  num_layers: 40
+  dtype: torch.bfloat16
+  vae_dtype: torch.bfloat16
+  t5_dtype: torch.bfloat16
+
+# Sparse attention
+attention:
+  backend: tilelang       # tilelang or triton
+
+# Scheduling
+scheduler:
+  num_train_timesteps: 1000
+  shift: 6.0
+  sample_solver: unipc
+
+# Inference defaults
+inference:
+  num_inference_steps: 32
+  guidance_scale: 2.5
+  seed: 42
+  output_fps: 16
+
+# Negative prompt
+n_prompt: "色调艳丽, 过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，稳定s的背景，三条腿，背景人很多，倒着走"
