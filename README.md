@@ -10,7 +10,7 @@
 [![Hugging Face](https://img.shields.io/badge/🤗_Hub-Model-yellow)](https://huggingface.co/sst12345/liveditor)
 
 <p align="center">
-  <img src="./assets/live_visualization.pdf" alt="Teaser" width="90%">
+  <img src="./assets/live_visualization.png" alt="Teaser" width="90%">
 </p>
 
 </div>
@@ -37,7 +37,7 @@ Video editing with diffusion transformers suffers from the quadratic complexity 
 ### 1. Clone & Install
 
 ```bash
-git clone <this-repo>
+git clone https://github.com/xie-lab-ml/LIVEditor.git
 cd LIVEditor
 pip install -r requirements.txt
 ```
@@ -124,7 +124,7 @@ Both backends produce visually identical results (mean absolute error < 1e-4).
 ## 🧠 Method
 
 <div align="center">
-  <img src="./assets/in_context_sparse_attention.pdf" alt="Architecture" width="90%">
+  <img src="./assets/in_context_sparse_attention.png" alt="Architecture" width="90%">
 </div>
 
 LIVE-EDITOR introduces three key components on top of the Wan 2.2 diffusion backbone:
@@ -203,7 +203,6 @@ LIVEditor/
 ├── requirements.txt                   # Python dependencies
 ├── infer.sh                           # Single-GPU inference script
 ├── slurm_infer.sh                     # Slurm submission script
-├── liveditor_ckpt.bin                 # Fine-tuned checkpoint
 ├── in_context_sparse_attention/       # Pluggable sparse kernels
 │   ├── editing_sparse_attention.py    # Main attention function (backend-agnostic)
 │   ├── tilelang_kernels.py            # TileLang kernel definitions
@@ -254,14 +253,3 @@ LIVEditor/
 ## 📄 License & Acknowledgements
 
 This project is built upon [Wan 2.2](https://github.com/Wan-Video/Wan2.2) and [Wan2.2-T2V-A14B](https://huggingface.co/Wan-AI/Wan2.2-T2V-A14B) by Alibaba. The in-context sparse attention kernels are powered by [TileLang](https://github.com/tilelang/tilelang) and [Triton](https://github.com/triton-lang/triton). FlashAttention is provided by [flash-attn](https://github.com/Dao-AILab/flash-attention). We thank the authors for their open-source contributions.
-
-If you find this work useful, please cite our paper:
-
-```bibtex
-@article{shao2025liveditor,
-  title   = {LIVE-EDITOR: Efficient and High-Quality Video Editing via Lightweight In-Context Sparse Attention},
-  author  = {Shitong Shao and Zikai Zhou and Haopeng Li and Yingwei Song and Wenliang Zhong and Lichen Bai and Zeke Xie},
-  journal = {arXiv preprint arXiv:2605.04569},
-  year    = {2025},
-}
-```
