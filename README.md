@@ -26,6 +26,8 @@ Video editing with diffusion transformers suffers from the quadratic complexity 
 > **Key Idea**: store compressed KV representations of the source video, retrieve only the top-*k* most relevant blocks via compressed attention scores, and apply sparse piecewise attention for the diffuse query blocks while using FlashAttention only for the most peaked ones.
 
 **Key results**:
+- A strong open-source video editing model leading in multiple aspects.
+- The first sparse attention for video editing
 - ⚡ **2.8× faster** than FlashAttention-2 at 65K tokens on RTX 4090
 - 🎯 Lightweight fine-tuning — only **80 steps** on ~100K video pairs
 - 🔌 Pluggable backend — supports **TileLang** and **Triton** sparse kernels
