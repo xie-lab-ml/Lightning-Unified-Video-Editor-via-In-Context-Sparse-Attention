@@ -1,6 +1,6 @@
 # LIVE-EDITOR
 
-### Efficient and High-Quality Video Editing via Lightweight In-Context Sparse Attention
+### Lightning Unified Video Editing via In-Context Sparse Attention
 
 <div align="center">
 
@@ -237,11 +237,11 @@ LIVEditor/
 ## 📝 Citation
 
 ```bibtex
-@article{shao2025liveditor,
-  title   = {LIVE-EDITOR: Efficient and High-Quality Video Editing via Lightweight In-Context Sparse Attention},
+@inproceedings{shao2026liveditor,
+  title   = {Lightning Unified Video Editing via In-Context Sparse Attention},
   author  = {Shitong Shao and Zikai Zhou and Haopeng Li and Yingwei Song and Wenliang Zhong and Lichen Bai and Zeke Xie},
-  journal = {arXiv preprint arXiv:2605.04569},
-  year    = {2025},
+  booktitle={The Forty-Third International Conference on Machine Learning},
+  year    = {2026},
 }
 ```
 
