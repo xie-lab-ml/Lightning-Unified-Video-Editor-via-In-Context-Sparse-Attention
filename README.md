@@ -6,6 +6,7 @@
 
 **Shitong Shao** · **Zikai Zhou** · **Haopeng Li** · **Yingwei Song** · **Wenliang Zhong** · **Lichen Bai** · **Zeke Xie**
 
+[![Project Page](https://img.shields.io/badge/Project-Page-green)](https://xie-lab-ml.github.io/liveditor-page/)
 [![Paper](https://img.shields.io/badge/Paper-arXiv-red)](https://arxiv.org/abs/2605.04569)
 [![Hugging Face](https://img.shields.io/badge/🤗_Hub-Model-yellow)](https://huggingface.co/sst12345/liveditor)
 
