@@ -1,4 +1,4 @@
-# LIVEditor
+# LIVEditor-14B
 
 ### Lightning Unified Video Editing via In-Context Sparse Attention
 
@@ -22,7 +22,7 @@
 
 Video editing with diffusion transformers suffers from the quadratic complexity of full self-attention — O(S²) in total token count — making it prohibitively expensive when both source and generated video tokens must be processed jointly.
 
-**LIVEditor** addresses this with **In-Context Sparse Attention**: a lightweight, training-free block-retrieval mechanism that efficiently selects the most relevant source-video tokens for each query block, avoiding the need for dense attention over the full sequence.
+**LIVEditor-14B** addresses this with **In-Context Sparse Attention**: a lightweight, training-free block-retrieval mechanism that efficiently selects the most relevant source-video tokens for each query block, avoiding the need for dense attention over the full sequence.
 
 > **Key Idea**: store compressed KV representations of the source video, retrieve only the top-*k* most relevant blocks via compressed attention scores, and apply sparse piecewise attention for the diffuse query blocks while using FlashAttention only for the most peaked ones.
 
@@ -124,7 +124,7 @@ Both backends produce visually identical results (mean absolute error < 1e-4).
   <img src="./assets/in_context_sparse_attention.png" alt="Architecture" width="90%">
 </div>
 
-LIVEditor introduces three key components on top of the Wan 2.2 diffusion backbone:
+LIVEditor-14B introduces three key components on top of the Wan 2.2 diffusion backbone:
 
 ### 1. Block-wise Compression
 
@@ -182,7 +182,7 @@ Query blocks are ranked by attention sharpness (the sum of top-*k* compressed at
 | InsV2V | 0.272 | 0.201 | 0.895 | 0.974 |
 | UniEdit | 0.276 | 0.204 | 0.898 | 0.976 |
 | I2VEdit | 0.280 | 0.208 | 0.902 | 0.977 |
-| **LIVEditor** | **0.289** | **0.215** | **0.911** | **0.981** |
+| **LIVEditor-14B** | **0.289** | **0.215** | **0.911** | **0.981** |
 
 > Detailed benchmark results and comparisons on VBench, VIPSeg, and DAVIS are available in the [paper](https://arxiv.org/abs/2605.04569).
 
