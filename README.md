@@ -239,7 +239,7 @@ LIVEditor-14B/
 
 ```bibtex
 @inproceedings{shao2026liveditor,
-  title   = {Lightning Unified Video Editing via In-Context Sparse Attention},
+  title   = {LIVEditor-14B: Lightning Unified Video Editing via In-Context Sparse Attention},
   author  = {Shitong Shao and Zikai Zhou and Haopeng Li and Yingwei Song and Wenliang Zhong and Lichen Bai and Zeke Xie},
   booktitle={The Forty-Third International Conference on Machine Learning},
   year    = {2026},
