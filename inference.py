@@ -1,5 +1,5 @@
 """
-LIVEditor — single-GPU video editing inference.
+LIVEditor-14B — single-GPU video editing inference.
 
 Usage:
     python inference.py \
@@ -31,7 +31,7 @@ from wanx.scheduler import FlowUniPCMultistepScheduler
 from wanx.utils import save_video_ffmpeg, read_video_ffmpeg
 
 
-class LIVEditor:
+class LIVEditor-14B:
     """Single-GPU video editing inference engine."""
 
     def __init__(self, config: dict, checkpoint_path: str):
@@ -298,7 +298,7 @@ class LIVEditor:
 
 
 def main():
-    parser = argparse.ArgumentParser(description='LIVEditor — video editing inference')
+    parser = argparse.ArgumentParser(description='LIVEditor-14B — video editing inference')
     parser.add_argument('--config', type=str, default='configs/inference.yaml')
     parser.add_argument('--checkpoint', type=str, required=True)
     parser.add_argument('--input', type=str, required=True)
@@ -316,13 +316,13 @@ def main():
     if args.backend:
         config['attention']['backend'] = args.backend
 
-    print(f"[LIVEditor] Loading checkpoint: {args.checkpoint}")
-    print(f"[LIVEditor] Backend: {config['attention']['backend']}")
+    print(f"[LIVEditor-14B] Loading checkpoint: {args.checkpoint}")
+    print(f"[LIVEditor-14B] Backend: {config['attention']['backend']}")
 
-    editor = LIVEditor(config, args.checkpoint)
+    editor = LIVEditor-14B(config, args.checkpoint)
 
-    print(f"[LIVEditor] Input: {args.input}")
-    print(f"[LIVEditor] Prompt: {args.prompt}")
+    print(f"[LIVEditor-14B] Input: {args.input}")
+    print(f"[LIVEditor-14B] Prompt: {args.prompt}")
 
     video = editor.run(
         input_video=args.input,
@@ -333,7 +333,7 @@ def main():
     )
 
     save_video_ffmpeg(video, args.output, fps=config['inference']['output_fps'])
-    print(f"[LIVEditor] Saved output to: {args.output}")
+    print(f"[LIVEditor-14B] Saved output to: {args.output}")
 
 
 if __name__ == '__main__':

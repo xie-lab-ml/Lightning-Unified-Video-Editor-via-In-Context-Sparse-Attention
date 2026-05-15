@@ -1,4 +1,4 @@
-# LIVEditor inference config
+# LIVEditor-14B inference config
 
 # Checkpoint
 # resume_ckpt: /path/to/checkpoint.bin

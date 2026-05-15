@@ -40,8 +40,8 @@ Video editing with diffusion transformers suffers from the quadratic complexity 
 ### 1. Clone & Install
 
 ```bash
-git clone https://github.com/xie-lab-ml/LIVEditor.git
-cd LIVEditor
+git clone https://github.com/xie-lab-ml/Lightning-Unified-Video-Editor-via-In-Context-Sparse-Attention.git
+cd LIVEditor-14B
 pip install -r requirements.txt
 ```
 
@@ -50,7 +50,7 @@ pip install -r requirements.txt
 | Component | Source | Path |
 |-----------|--------|------|
 | Wan 2.2-T2V-A14B | [Official](https://huggingface.co/Wan-AI/Wan2.2-T2V-A14B) | `pretrained_weights/Wan2.2-T2V-A14B/` |
-| LIVEditor checkpoint | [🤗 Hugging Face](https://huggingface.co/sst12345/liveditor) | `liveditor_ckpt.bin` |
+| LIVEditor-14B checkpoint | [🤗 Hugging Face](https://huggingface.co/sst12345/liveditor) | `liveditor_ckpt.bin` |
 
 ```bash
 # Download fine-tuned checkpoint from Hugging Face
@@ -191,7 +191,7 @@ Query blocks are ranked by attention sharpness (the sum of top-*k* compressed at
 ## 📁 Project Structure
 
 ```
-LIVEditor/
+LIVEditor-14B/
 ├── inference.py                       # Main inference entrypoint
 ├── inference.yaml                     # Default config
 ├── model.py                           # WanModel with in-context sparse attention

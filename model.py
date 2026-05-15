@@ -1,5 +1,5 @@
 """
-WanModel adapted for LIVEditor inference.
+WanModel adapted for LIVEditor-14B inference.
 
 Uses in_context_sparse_attention (tilelang/triton) for self-attention.
 Stripped of all training-only code (DDP, gradient checkpointing, EMA, etc.).
