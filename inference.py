@@ -31,7 +31,7 @@ from wanx.scheduler import FlowUniPCMultistepScheduler
 from wanx.utils import save_video_ffmpeg, read_video_ffmpeg
 
 
-class LIVEditor-14B:
+class LIVEditor14B:
     """Single-GPU video editing inference engine."""
 
     def __init__(self, config: dict, checkpoint_path: str):
@@ -55,8 +55,6 @@ class LIVEditor-14B:
             checkpoint_path=t5_ckpt,
             tokenizer_path=t5_tok,
         )
-        self.neg_prompt_embed = torch.load(config['neg_prompt_embed_path']).to(
-            'cpu', dtype=eval(config['model']['dtype']))
 
         # ---------- WanModel ----------
         self.model = WanModel(
@@ -319,7 +317,7 @@ def main():
     print(f"[LIVEditor-14B] Loading checkpoint: {args.checkpoint}")
     print(f"[LIVEditor-14B] Backend: {config['attention']['backend']}")
 
-    editor = LIVEditor-14B(config, args.checkpoint)
+    editor = LIVEditor14B(config, args.checkpoint)
 
     print(f"[LIVEditor-14B] Input: {args.input}")
     print(f"[LIVEditor-14B] Prompt: {args.prompt}")
