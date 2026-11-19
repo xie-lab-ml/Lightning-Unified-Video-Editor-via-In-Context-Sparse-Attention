@@ -40,7 +40,7 @@ Video editing with diffusion transformers suffers from the quadratic complexity 
 ### 1. Clone & Install
 
 ```bash
-git clone https://github.com/xie-lab-ml/Lightning-Unified-Video-Editor-via-In-Context-Sparse-Attention.git
+git clone https://github.com/xie-lab-ml/Lightning-Unified-Video-Editor-via-In-Context-Sparse-Attention.git LIVEditor-14B
 cd LIVEditor-14B
 pip install -r requirements.txt
 ```
